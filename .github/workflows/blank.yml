@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+jobs:
+  helmbuild:
+    name: Update Chart Repo
+    runs-on: ubuntu-latest
+    env:
+      GOARCH: amd64
+      GOOS: linux
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: update index.yaml
+        uses: nolte/github-action/helm/repo_index_update@master
