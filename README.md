@@ -2,6 +2,7 @@
 
 Personal Helm Chart Repository, used for publish self written or forked Chart Projects.
 
+You can find a list of hosted chart versions at [nolte.github.io/helm-charts/](https://nolte.github.io/helm-charts/).
 
 ## Usage
 
@@ -13,7 +14,7 @@ helm search repo nolte
 
 ## Github Action Integration
 
-
+**TODO**
 
 
 ## Links
