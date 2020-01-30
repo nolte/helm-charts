@@ -12,12 +12,22 @@ jobs:
       - uses: actions/checkout@v1
         # with:
         #   submodules: true
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.62.2'
           extended: true
+
+      - name: update index.yaml
+        uses: nolte/github-action/helm/repo_index_update@master
+        with:
+          path: ./chart-repo
+          url: https://nolte.github.io/helm-charts/
+
+      - name: Commit files
+        run: |
+          # copy generated chart repo index.yaml to hugo data folder
+          cp ./chart-repo/index.yaml ./data/index.yaml
 
       - name: Build
         run: hugo --minify
