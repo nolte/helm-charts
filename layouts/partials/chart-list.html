@@ -1,0 +1,38 @@
+<article class="table">
+    <header>
+        <h2>Charts</h2>
+    </header>
+    <section>
+        {{ range $key,$value := $.Site.Data.index.entries }}
+        <article class="day-forecast">
+            <header>
+                <h3>{{ $key }}</h3>
+            </header>
+            <section>
+                <table style="width:100%">
+                    <thead>
+                        <tr>
+                            <th scope="col">Version</th>
+                            <th scope="col">AppVersion</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ range $key,$value := $value }}
+                        <tr>
+                            <td>{{ .appVersion }}</td>
+                            <td>{{ .appVersion }}</td>
+                            <td>{{ .description }}</td>
+                            <td><a href="{{ delimit (first 1 .urls) "" | absURL }}">Download
+                                </a><small>({{ .digest }})</small>
+                            </td>
+                        </tr>
+                        {{ end }}
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        {{ end }}
+    </section>
+</article>

@@ -1,0 +1,26 @@
+baseURL = "https://nolte.github.io/helm-charts"
+languageCode = "en-us"
+title = "Self hosted Helm Chart Repo"
+#copyright = ""
+staticDir = ["static", "chart-repo"]
+
+[params]
+  sharingicons = false
+  disable_sri = true
+  
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 1
+
+
+[module]
+    [[module.imports]]
+      disable = false
+      ignoreConfig = false
+      path = "github.com/nolte/hugo-theme-bootstrap4-blog"
