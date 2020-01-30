@@ -21,7 +21,7 @@
                     <tbody>
                         {{ range $key,$value := $value }}
                         <tr>
-                            <td>{{ .appVersion }}</td>
+                            <td>{{ .version }}</td>
                             <td>{{ .appVersion }}</td>
                             <td>{{ .description }}</td>
                             <td><a href="{{ delimit (first 1 .urls) "" | absURL }}">Download
