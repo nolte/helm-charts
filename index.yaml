@@ -3,7 +3,7 @@ entries:
   csi-hcloud:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-02-03T22:49:33.28202356Z"
+    created: "2020-02-05T14:17:53.452350512Z"
     description: A Helm chart for Hetzner Cloud CSI
     digest: 992fb9aa9080cb4311360badb407d381bcb5c2c90f1d14499ee59e49b920ec60
     home: https://github.com/hetznercloud/csi-driver
@@ -25,7 +25,7 @@ entries:
   gitea:
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2020-02-03T22:49:33.283579259Z"
+    created: "2020-02-05T14:17:53.453905313Z"
     description: Git with a cup of tea
     digest: 5553bc62ca940472483198ba16c77fd7e5f5cb0cdcdf10612240112bd1942e94
     home: https://gitea.io
@@ -49,7 +49,7 @@ entries:
     version: 1.10.0
   - apiVersion: v1
     appVersion: 1.9.3
-    created: "2020-02-03T22:49:33.285318458Z"
+    created: "2020-02-05T14:17:53.455372414Z"
     description: Git with a cup of tea
     digest: 31bc57228737e81ef8e6fed688d73be824ae3ffb15350fad047f41ac248f9a61
     home: https://gitea.io
@@ -73,8 +73,31 @@ entries:
     version: 1.9.3
   minecraft:
   - apiVersion: v1
+    appVersion: "20200129"
+    created: "2020-02-05T14:17:53.457624015Z"
+    description: Minecraft server
+    digest: fb8b836a174f53ea57dade57d05c224777a6a07151ebee95d6f7877bb0abc7ca
+    home: https://minecraft.net/
+    keywords:
+    - game
+    - server
+    maintainers:
+    - email: gtaylor@gc-taylor.com
+      name: gtaylor
+    - email: jeff@billimek.com
+      name: billimek
+    - email: itzgeoff@gmail.com
+      name: itzg
+    name: minecraft
+    sources:
+    - https://hub.docker.com/r/itzg/minecraft-server/~/dockerfile/
+    - https://github.com/itzg/dockerfiles
+    urls:
+    - https://nolte.github.io/helm-charts/charts/minecraft-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v1
     appVersion: 1.14.4
-    created: "2020-02-03T22:49:33.286470758Z"
+    created: "2020-02-05T14:17:53.456583714Z"
     description: Minecraft server
     digest: f1acdc1fc03c9d2203618167d0b34f488b0dd9f5ae4da641b02ce6ac0b36c6ae
     home: https://minecraft.net/
@@ -95,4 +118,4 @@ entries:
     urls:
     - https://nolte.github.io/helm-charts/charts/minecraft-1.1.2.tgz
     version: 1.1.2
-generated: "2020-02-03T22:49:33.281270261Z"
+generated: "2020-02-05T14:17:53.451731412Z"
