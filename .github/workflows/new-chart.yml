@@ -37,10 +37,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "New Chart Release from ${{ github.event.client_payload.repository }}"
           body: |
-          # New Release
-
-          New Release from [${{ github.event.client_payload.repository }}](${{ steps.load_release_informations.outputs.url }})
-
-          ---
-
-          ${{ steps.load_release_informations.outputs.body }}
+            # New Release
+          
+            New Release from [${{ github.event.client_payload.repository }}](${{ steps.load_release_informations.outputs.url }})
+          
+            ---
+            
+            ${{ steps.load_release_informations.outputs.body }}
