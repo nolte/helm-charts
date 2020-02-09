@@ -22,18 +22,25 @@ jobs:
         run: |      
           echo '${{ steps.load_release_informations.outputs.url }}'
 
+      - uses: actions/checkout@v2
+        if: github.event.action == 'helm_release'
+      - name: wget
+        uses: wei/wget@v1
+        if: github.event.action == 'helm_release'
+        with:
+          args: -P ./chart-repo/ ${{ github.event.client_payload.chart_download_url }} 
 
-#      - uses: actions/checkout@v2
-#        if: github.event.action == 'helm_release'
-#      - name: wget
-#        uses: wei/wget@v1
-#        if: github.event.action == 'helm_release'
-#        with:
-#          args: -P ./chart-repo/ ${{ github.event.client_payload.chart_download_url }} 
-#
-#      - name: Create Pull Request
-#        uses: peter-evans/create-pull-request@v2
-#        if: success()
-#        with:
-#          token: ${{ secrets.GITHUB_TOKEN }}
-#          title: "New Chart Release"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2.3.0
+        if: success()
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "New Chart Release from ${{ github.event.client_payload.repository }}"
+          body: |
+          # New Release
+
+          New Release from [${{ github.event.client_payload.repository }}](${{ steps.load_release_informations.outputs.url }})
+
+          ---
+
+          ${{ steps.load_release_informations.outputs.body }}
