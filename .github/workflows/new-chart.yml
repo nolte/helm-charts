@@ -1,0 +1,26 @@
+name: Remote Dispatch Action Responder
+
+on: [repository_dispatch]
+
+jobs:
+  integrate_chart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Information
+        run: |
+          echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
+      - name: PONG - Dispatch response to received PING
+        if: github.event.action == 'helm_release'
+        run: |
+          echo "Receive"
+
+      - name: wget
+        uses: wei/wget@v1
+        if: github.event.action == 'helm_release'
+        with:
+          args: -O ./chart-repo/ ${{ github.event.client_payload.chart_download_url }} 
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
