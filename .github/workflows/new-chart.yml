@@ -9,20 +9,28 @@ jobs:
       - name: Event Information
         run: |
           echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
-      - name: PONG - Dispatch response to received PING
-        if: github.event.action == 'helm_release'
-        run: |
-          echo "Receive"
-      - uses: actions/checkout@v2
-        if: github.event.action == 'helm_release'
-      - name: wget
-        uses: wei/wget@v1
+      - uses: actions/github-script@0.4.0
         if: github.event.action == 'helm_release'
         with:
-          args: -P ./chart-repo/ ${{ github.event.client_payload.chart_download_url }} 
-
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            console.log(context.event.client_payload.repository)
+            #octokit.repos.getRelease({
+            #  owner,
+            #  repo,
+            #  release_id
+            #})
+#      - uses: actions/checkout@v2
+#        if: github.event.action == 'helm_release'
+#      - name: wget
+#        uses: wei/wget@v1
+#        if: github.event.action == 'helm_release'
+#        with:
+#          args: -P ./chart-repo/ ${{ github.event.client_payload.chart_download_url }} 
+#
+#      - name: Create Pull Request
+#        uses: peter-evans/create-pull-request@v2
+#        if: success()
+#        with:
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          title: "New Chart Release"
