@@ -13,12 +13,14 @@ jobs:
         if: github.event.action == 'helm_release'
         run: |
           echo "Receive"
-
+      - uses: actions/checkout@v2
+        if: github.event.action == 'helm_release'
       - name: wget
         uses: wei/wget@v1
         if: github.event.action == 'helm_release'
         with:
           args: -O ./chart-repo/ ${{ github.event.client_payload.chart_download_url }} 
+
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
