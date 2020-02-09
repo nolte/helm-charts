@@ -14,7 +14,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(JSON.stringify(context))
+            console.log(context.payload.client_payload.repository)
  
 #      - uses: actions/checkout@v2
 #        if: github.event.action == 'helm_release'
