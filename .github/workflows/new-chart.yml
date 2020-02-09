@@ -14,10 +14,11 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const repoInformations = context.payload.client_payload.repository.split("/")
+            const owner = context.payload.client_payload.repository.split("/")[0]
+            const repo = context.payload.client_payload.repository.split("/")[0]
             const release = await github.repos.getRelease({
-              repoInformations[0],
-              repoInformations[1],
+              owner,
+              repo,
               context.payload.client_payload.releaseId
             })
             console.log(release)
