@@ -16,10 +16,11 @@ jobs:
           script: |
             const owner = context.payload.client_payload.repository.split("/")[0]
             const repo = context.payload.client_payload.repository.split("/")[0]
+            const releaseId = context.payload.client_payload.releaseId
             const release = await github.repos.getRelease({
               owner,
               repo,
-              context.payload.client_payload.releaseId
+              releaseId
             })
             console.log(release)
             release
