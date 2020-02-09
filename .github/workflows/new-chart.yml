@@ -11,6 +11,7 @@ jobs:
           echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
       - uses: actions/github-script@0.4.0
         if: github.event.action == 'helm_release'
+        id: load_release_informations
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
@@ -23,7 +24,12 @@ jobs:
               release_id
             })
             console.log(release)
-            release
+            release.data
+      - name: Create Pull Request
+        if: success()
+        run: |
+          echo "Event '${{ steps.load_release_informations.outputs.html_url }}'"        
+
 #      - uses: actions/checkout@v2
 #        if: github.event.action == 'helm_release'
 #      - name: wget
