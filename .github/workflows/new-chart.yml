@@ -18,9 +18,7 @@ jobs:
           releaseId: "${{ github.event.client_payload.releaseId }}"
       - name: Create Pull Request
         if: success()
-        run: |
-          sudo apt-get install jq
-          
+        run: |      
           echo '${{ steps.load_release_informations.outputs.url }}'
 
 
