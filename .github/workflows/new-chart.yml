@@ -29,8 +29,9 @@ jobs:
         if: success()
         run: |
           sudo apt-get install jq
-          URL=$(echo "${{ steps.load_release_informations.outputs.result }}" | jq '.url' -r)
-          echo ::set-env name=RELEASEURL::"${URL}"     
+          
+          echo "${{ steps.load_release_informations.outputs.result }}" | jq
+
 
 #      - uses: actions/checkout@v2
 #        if: github.event.action == 'helm_release'
