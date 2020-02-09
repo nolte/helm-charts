@@ -28,7 +28,7 @@ jobs:
       - name: Create Pull Request
         if: success()
         run: |
-          echo "Event '${{ steps.load_release_informations.outputs.result }}'"        
+          echo "Event '${{ steps.load_release_informations.outputs.result.url }}'"        
 
 #      - uses: actions/checkout@v2
 #        if: github.event.action == 'helm_release'
