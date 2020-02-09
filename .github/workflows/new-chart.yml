@@ -19,7 +19,7 @@ jobs:
         uses: wei/wget@v1
         if: github.event.action == 'helm_release'
         with:
-          args: -O ./chart-repo/ ${{ github.event.client_payload.chart_download_url }} 
+          args: -P ./chart-repo/ ${{ github.event.client_payload.chart_download_url }} 
 
 
       - name: Create Pull Request
