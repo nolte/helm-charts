@@ -14,8 +14,14 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(context.payload.client_payload.repository)
- 
+            const repoInformations = context.payload.client_payload.repository.split("/")
+            const release = await github.repos.getRelease({
+              repoInformations[0],
+              repoInformations[1],
+              context.payload.client_payload.releaseId
+            })
+            console.log(release)
+            release
 #      - uses: actions/checkout@v2
 #        if: github.event.action == 'helm_release'
 #      - name: wget
