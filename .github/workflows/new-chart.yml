@@ -24,7 +24,7 @@ jobs:
               release_id
             })
             console.log(release)
-            release.data
+            return release.data
       - name: Create Pull Request
         if: success()
         run: |
