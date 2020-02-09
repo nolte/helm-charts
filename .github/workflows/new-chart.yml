@@ -9,22 +9,13 @@ jobs:
       - name: Event Information
         run: |
           echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
-      - uses: actions/github-script@0.4.0
-        if: github.event.action == 'helm_release'
+
+      - name: Run shasum
         id: load_release_informations
-        #result-encoding: string
+        uses: nolte/github-action/github/getRelease@feature/shasum
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const owner = context.payload.client_payload.repository.split("/")[0]
-            const repo = context.payload.client_payload.repository.split("/")[1]
-            const release_id = context.payload.client_payload.releaseId
-            const release = await github.repos.getRelease({
-              owner,
-              repo,
-              release_id
-            })
-            return release.data
+          repo: "${{ github.event.client_payload.repository }}"
+          releaseId: "${{ github.event.client_payload.releaseId }}"
       - name: Create Pull Request
         if: success()
         run: |
