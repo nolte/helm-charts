@@ -15,6 +15,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            const core = require('@actions/core')
             const owner = context.payload.client_payload.repository.split("/")[0]
             const repo = context.payload.client_payload.repository.split("/")[1]
             const release_id = context.payload.client_payload.releaseId
@@ -24,6 +25,7 @@ jobs:
               release_id
             })
             console.log(release)
+            core.setOutput('url', release.data.url );
             return release.data
       - name: Create Pull Request
         if: success()
