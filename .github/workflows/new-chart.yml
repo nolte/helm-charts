@@ -15,11 +15,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             console.log(context.event.client_payload.repository)
-            #octokit.repos.getRelease({
-            #  owner,
-            #  repo,
-            #  release_id
-            #})
+ 
 #      - uses: actions/checkout@v2
 #        if: github.event.action == 'helm_release'
 #      - name: wget
