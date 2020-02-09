@@ -12,10 +12,10 @@ jobs:
       - uses: actions/github-script@0.4.0
         if: github.event.action == 'helm_release'
         id: load_release_informations
+        #result-encoding: string
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const core = require('@actions/core')
             const owner = context.payload.client_payload.repository.split("/")[0]
             const repo = context.payload.client_payload.repository.split("/")[1]
             const release_id = context.payload.client_payload.releaseId
@@ -24,13 +24,13 @@ jobs:
               repo,
               release_id
             })
-            console.log(release)
-            core.setOutput('url', release.data.url );
             return release.data
       - name: Create Pull Request
         if: success()
         run: |
-          echo "Event '${{ steps.load_release_informations.outputs.result }}'"        
+          sudo apt-get install jq
+          URL=$(echo "${{ steps.load_release_informations.outputs.result }}" | jq '.url' -r)
+          echo ::set-env name=RELEASEURL::"${URL}"     
 
 #      - uses: actions/checkout@v2
 #        if: github.event.action == 'helm_release'
