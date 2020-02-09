@@ -21,7 +21,7 @@ jobs:
         run: |
           sudo apt-get install jq
           
-          echo '${{ steps.load_release_informations.outputs.result }}'
+          echo '${{ steps.load_release_informations.outputs.url }}'
 
 
 #      - uses: actions/checkout@v2
