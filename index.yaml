@@ -3,7 +3,7 @@ entries:
   csi-hcloud:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-09T17:27:04.339053096Z"
+    created: "2020-06-28T08:59:33.359242857Z"
     description: A Helm chart for Hetzner Cloud CSI
     digest: 992fb9aa9080cb4311360badb407d381bcb5c2c90f1d14499ee59e49b920ec60
     home: https://github.com/hetznercloud/csi-driver
@@ -22,10 +22,26 @@ entries:
     urls:
     - https://nolte.github.io/helm-charts/charts/csi-hcloud-0.1.0.tgz
     version: 0.1.0
+  forecastle:
+  - apiVersion: v1
+    created: "2020-06-28T08:59:33.360525557Z"
+    description: forecastle chart that runs on kubernetes
+    digest: 7504bf0b6874b71a54c928e6884493c3efff9b88564a3947751fd95149678ee1
+    home: https://github.com/stakater/Forecastle
+    keywords:
+    - forecastle
+    - kubernetes
+    maintainers:
+    - email: stakater@aurorasolutions.io
+      name: Stakater
+    name: forecastle
+    urls:
+    - https://nolte.github.io/helm-charts/charts/forecastle-v1.0.44.tgz
+    version: v1.0.44
   gitea:
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2020-06-09T17:27:04.342397677Z"
+    created: "2020-06-28T08:59:33.363799157Z"
     description: Git with a cup of tea
     digest: 14799e5f3552cfd0808b7dcf1ee7bf9a77c70bc0e16f210801b4111b7e4218b9
     home: https://gitea.io
@@ -49,7 +65,7 @@ entries:
     version: 1.10.1
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2020-06-09T17:27:04.340657435Z"
+    created: "2020-06-28T08:59:33.362412257Z"
     description: Git with a cup of tea
     digest: 5553bc62ca940472483198ba16c77fd7e5f5cb0cdcdf10612240112bd1942e94
     home: https://gitea.io
@@ -73,7 +89,7 @@ entries:
     version: 1.10.0
   - apiVersion: v1
     appVersion: 1.9.3
-    created: "2020-06-09T17:27:04.343930514Z"
+    created: "2020-06-28T08:59:33.365160957Z"
     description: Git with a cup of tea
     digest: 31bc57228737e81ef8e6fed688d73be824ae3ffb15350fad047f41ac248f9a61
     home: https://gitea.io
@@ -98,7 +114,7 @@ entries:
   minecraft:
   - apiVersion: v1
     appVersion: "20200129"
-    created: "2020-06-09T17:27:04.346387373Z"
+    created: "2020-06-28T08:59:33.367362257Z"
     description: Minecraft server
     digest: 6ad4c8af3cf1287b763621904b2754c87706e3cfd410cf26444e296bdb0a513e
     home: https://minecraft.net/
@@ -121,7 +137,7 @@ entries:
     version: 1.2.0
   - apiVersion: v1
     appVersion: 1.14.4
-    created: "2020-06-09T17:27:04.345073941Z"
+    created: "2020-06-28T08:59:33.366208257Z"
     description: Minecraft server
     digest: f1acdc1fc03c9d2203618167d0b34f488b0dd9f5ae4da641b02ce6ac0b36c6ae
     home: https://minecraft.net/
@@ -145,7 +161,7 @@ entries:
   workflowtest:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-09T17:27:04.338553484Z"
+    created: "2020-06-28T08:59:33.358784957Z"
     description: A Helm chart for Kubernetes
     digest: 7f4be77f5cf8813649cde06fdf12c14bc2de09bdfb7085f68d4e46b461fa44f2
     home: https://github.com/nolte/helm-chart-workflowtest
@@ -157,4 +173,4 @@ entries:
     urls:
     - https://nolte.github.io/helm-charts/workflowtest-0.98.0.tgz
     version: 0.98.0
-generated: "2020-06-09T17:27:04.337278353Z"
+generated: "2020-06-28T08:59:33.358037257Z"
