@@ -3,7 +3,7 @@ entries:
   csi-hcloud:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-28T09:03:56.463965187Z"
+    created: "2020-06-28T09:07:17.815412482Z"
     description: A Helm chart for Hetzner Cloud CSI
     digest: 992fb9aa9080cb4311360badb407d381bcb5c2c90f1d14499ee59e49b920ec60
     home: https://github.com/hetznercloud/csi-driver
@@ -24,7 +24,7 @@ entries:
     version: 0.1.0
   forecastle:
   - apiVersion: v1
-    created: "2020-06-28T09:03:56.464527085Z"
+    created: "2020-06-28T09:07:17.815882281Z"
     description: forecastle chart that runs on kubernetes
     digest: 7504bf0b6874b71a54c928e6884493c3efff9b88564a3947751fd95149678ee1
     home: https://github.com/stakater/Forecastle
@@ -41,7 +41,7 @@ entries:
   gitea:
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2020-06-28T09:03:56.467670777Z"
+    created: "2020-06-28T09:07:17.818242976Z"
     description: Git with a cup of tea
     digest: 14799e5f3552cfd0808b7dcf1ee7bf9a77c70bc0e16f210801b4111b7e4218b9
     home: https://gitea.io
@@ -65,7 +65,7 @@ entries:
     version: 1.10.1
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2020-06-28T09:03:56.466104081Z"
+    created: "2020-06-28T09:07:17.817007578Z"
     description: Git with a cup of tea
     digest: 5553bc62ca940472483198ba16c77fd7e5f5cb0cdcdf10612240112bd1942e94
     home: https://gitea.io
@@ -89,7 +89,7 @@ entries:
     version: 1.10.0
   - apiVersion: v1
     appVersion: 1.9.3
-    created: "2020-06-28T09:03:56.469090373Z"
+    created: "2020-06-28T09:07:17.819331574Z"
     description: Git with a cup of tea
     digest: 31bc57228737e81ef8e6fed688d73be824ae3ffb15350fad047f41ac248f9a61
     home: https://gitea.io
@@ -114,7 +114,7 @@ entries:
   minecraft:
   - apiVersion: v1
     appVersion: "20200129"
-    created: "2020-06-28T09:03:56.471226168Z"
+    created: "2020-06-28T09:07:17.820911471Z"
     description: Minecraft server
     digest: 6ad4c8af3cf1287b763621904b2754c87706e3cfd410cf26444e296bdb0a513e
     home: https://minecraft.net/
@@ -137,7 +137,7 @@ entries:
     version: 1.2.0
   - apiVersion: v1
     appVersion: 1.14.4
-    created: "2020-06-28T09:03:56.470091071Z"
+    created: "2020-06-28T09:07:17.820084373Z"
     description: Minecraft server
     digest: f1acdc1fc03c9d2203618167d0b34f488b0dd9f5ae4da641b02ce6ac0b36c6ae
     home: https://minecraft.net/
@@ -158,10 +158,27 @@ entries:
     urls:
     - https://nolte.github.io/helm-charts/charts/minecraft-1.1.2.tgz
     version: 1.1.2
+  proxyinjector:
+  - apiVersion: v1
+    created: "2020-06-28T09:07:17.82123447Z"
+    description: ProxyInjector chart that runs on kubernetes
+    digest: 80e0901b6948f66f48fc7e734901eaa2d1388e8979f99590a2c6b6eb841a054b
+    home: https://github.com/stakater/ProxyInjector
+    keywords:
+    - Proxy
+    - Authentication
+    - kubernetes
+    maintainers:
+    - email: hello@stakater.com
+      name: Stakater
+    name: proxyinjector
+    urls:
+    - https://nolte.github.io/helm-charts/charts/proxyinjector-v0.0.23.tgz
+    version: v0.0.23
   reloader:
   - apiVersion: v1
     appVersion: v0.0.60
-    created: "2020-06-28T09:03:56.472139366Z"
+    created: "2020-06-28T09:07:17.822981967Z"
     description: Reloader chart that runs on kubernetes
     digest: 2579d65cb3b62db3c3f7a37830981217cd04e2e0049fa4d9cfd635aa58501b5e
     home: https://github.com/stakater/Reloader
@@ -193,7 +210,7 @@ entries:
   workflowtest:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-28T09:03:56.463461688Z"
+    created: "2020-06-28T09:07:17.814839483Z"
     description: A Helm chart for Kubernetes
     digest: 7f4be77f5cf8813649cde06fdf12c14bc2de09bdfb7085f68d4e46b461fa44f2
     home: https://github.com/nolte/helm-chart-workflowtest
@@ -205,4 +222,4 @@ entries:
     urls:
     - https://nolte.github.io/helm-charts/workflowtest-0.98.0.tgz
     version: 0.98.0
-generated: "2020-06-28T09:03:56.46257389Z"
+generated: "2020-06-28T09:07:17.814173984Z"
