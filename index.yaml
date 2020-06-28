@@ -3,7 +3,7 @@ entries:
   csi-hcloud:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-28T08:59:33.359242857Z"
+    created: "2020-06-28T09:03:56.463965187Z"
     description: A Helm chart for Hetzner Cloud CSI
     digest: 992fb9aa9080cb4311360badb407d381bcb5c2c90f1d14499ee59e49b920ec60
     home: https://github.com/hetznercloud/csi-driver
@@ -24,7 +24,7 @@ entries:
     version: 0.1.0
   forecastle:
   - apiVersion: v1
-    created: "2020-06-28T08:59:33.360525557Z"
+    created: "2020-06-28T09:03:56.464527085Z"
     description: forecastle chart that runs on kubernetes
     digest: 7504bf0b6874b71a54c928e6884493c3efff9b88564a3947751fd95149678ee1
     home: https://github.com/stakater/Forecastle
@@ -41,7 +41,7 @@ entries:
   gitea:
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2020-06-28T08:59:33.363799157Z"
+    created: "2020-06-28T09:03:56.467670777Z"
     description: Git with a cup of tea
     digest: 14799e5f3552cfd0808b7dcf1ee7bf9a77c70bc0e16f210801b4111b7e4218b9
     home: https://gitea.io
@@ -65,7 +65,7 @@ entries:
     version: 1.10.1
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2020-06-28T08:59:33.362412257Z"
+    created: "2020-06-28T09:03:56.466104081Z"
     description: Git with a cup of tea
     digest: 5553bc62ca940472483198ba16c77fd7e5f5cb0cdcdf10612240112bd1942e94
     home: https://gitea.io
@@ -89,7 +89,7 @@ entries:
     version: 1.10.0
   - apiVersion: v1
     appVersion: 1.9.3
-    created: "2020-06-28T08:59:33.365160957Z"
+    created: "2020-06-28T09:03:56.469090373Z"
     description: Git with a cup of tea
     digest: 31bc57228737e81ef8e6fed688d73be824ae3ffb15350fad047f41ac248f9a61
     home: https://gitea.io
@@ -114,7 +114,7 @@ entries:
   minecraft:
   - apiVersion: v1
     appVersion: "20200129"
-    created: "2020-06-28T08:59:33.367362257Z"
+    created: "2020-06-28T09:03:56.471226168Z"
     description: Minecraft server
     digest: 6ad4c8af3cf1287b763621904b2754c87706e3cfd410cf26444e296bdb0a513e
     home: https://minecraft.net/
@@ -137,7 +137,7 @@ entries:
     version: 1.2.0
   - apiVersion: v1
     appVersion: 1.14.4
-    created: "2020-06-28T08:59:33.366208257Z"
+    created: "2020-06-28T09:03:56.470091071Z"
     description: Minecraft server
     digest: f1acdc1fc03c9d2203618167d0b34f488b0dd9f5ae4da641b02ce6ac0b36c6ae
     home: https://minecraft.net/
@@ -158,10 +158,42 @@ entries:
     urls:
     - https://nolte.github.io/helm-charts/charts/minecraft-1.1.2.tgz
     version: 1.1.2
+  reloader:
+  - apiVersion: v1
+    appVersion: v0.0.60
+    created: "2020-06-28T09:03:56.472139366Z"
+    description: Reloader chart that runs on kubernetes
+    digest: 2579d65cb3b62db3c3f7a37830981217cd04e2e0049fa4d9cfd635aa58501b5e
+    home: https://github.com/stakater/Reloader
+    icon: https://raw.githubusercontent.com/stakater/Reloader/master/assets/web/reloader-round-100px.png
+    keywords:
+    - Reloader
+    - kubernetes
+    maintainers:
+    - email: hello@stakater.com
+      name: Stakater
+    - email: rasheed@aurorasolutions.io
+      name: rasheedamir
+    - email: waseemhassan@stakater.com
+      name: waseem-h
+    - email: faizan.ahmad55@outlook.com
+      name: faizanahmad055
+    - email: ali.kahoot@aurorasolutions.io
+      name: kahootali
+    - email: ahmad@aurorasolutions.io
+      name: ahmadiq
+    - email: ahsanmuhammad1@outlook.com
+      name: ahsan-storm
+    name: reloader
+    sources:
+    - https://github.com/stakater/IngressMonitorController
+    urls:
+    - https://nolte.github.io/helm-charts/charts/reloader-v0.0.60.tgz
+    version: v0.0.60
   workflowtest:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-28T08:59:33.358784957Z"
+    created: "2020-06-28T09:03:56.463461688Z"
     description: A Helm chart for Kubernetes
     digest: 7f4be77f5cf8813649cde06fdf12c14bc2de09bdfb7085f68d4e46b461fa44f2
     home: https://github.com/nolte/helm-chart-workflowtest
@@ -173,4 +205,4 @@ entries:
     urls:
     - https://nolte.github.io/helm-charts/workflowtest-0.98.0.tgz
     version: 0.98.0
-generated: "2020-06-28T08:59:33.358037257Z"
+generated: "2020-06-28T09:03:56.46257389Z"
